@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>{{ title }}</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="calculator-body">
+        <div class="calculator-screen">
+          <div class="operation-txt">{{ operation_screen }}</div>
+          <div class="result-txt">{{ result_screen }}</div>
+        </div>
+        <div class="calculator-buttons">
+          <button class="operation-button" (click)="percentage()">%</button>
+          <button
+            class="operation-button"
+            (click)="clear()"
+            (window:keydown.delete)="clear()"
+          >
+            CE
+          </button>
+          <button
+            class="operation-button"
+            (click)="clear()"
+            (window:keydown.delete)="clear()"
+          >
+            C
+          </button>
+          <button
+            class="operation-button"
+            (click)="delete()"
+            (window:keydown.backspace)="delete()"
+          >
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+          <button class="operation-button" (click)="unary_clicked('1/(')">
+            1/x
+          </button>
+          <button class="operation-button" (click)="unary_clicked('sqr(')">
+            x<sup>2</sup>
+          </button>
+          <button class="operation-button" (click)="unary_clicked('√(')">
+            <i class="fa-solid fa-square-root-variable"></i>
+          </button>
+          <button
+            class="operation-button"
+            (click)="binary_clicked('÷')"
+            (window:keydown.)="binary_clicked('÷')"
+          >
+            <i class="fa-solid fa-divide"></i>
+          </button>
+          <button
+            class="digit-button"
+            (click)="number_clicked('7')"
+            (window:keydown.7)="number_clicked('7')"
+          >
+            7
+          </button>
+          <button
+            class="digit-button"
+            (click)="number_clicked('8')"
+            (window:keydown.8)="number_clicked('8')"
+          >
+            8
+          </button>
+          <button
+            class="digit-button"
+            (click)="number_clicked('9')"
+            (window:keydown.9)="number_clicked('9')"
+          >
+            9
+          </button>
+          <button
+            class="operation-button"
+            (click)="binary_clicked('x')"
+            (window:keydown.*)="binary_clicked('x')"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button
+            class="digit-button"
+            (click)="number_clicked('4')"
+            (window:keydown.4)="number_clicked('4')"
+          >
+            4
+          </button>
+          <button
+            class="digit-button"
+            (click)="number_clicked('5')"
+            (window:keydown.5)="number_clicked('5')"
+          >
+            5
+          </button>
+          <button
+            class="digit-button"
+            (click)="number_clicked('6')"
+            (window:keydown.6)="number_clicked('6')"
+          >
+            6
+          </button>
+          <button
+            class="operation-button"
+            (click)="binary_clicked('-')"
+            (window:keydown.-)="binary_clicked('-')"
+          >
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <button
+            class="digit-button"
+            (click)="number_clicked('1')"
+            (window:keydown.1)="number_clicked('1')"
+          >
+            1
+          </button>
+          <button
+            class="digit-button"
+            (click)="number_clicked('2')"
+            (window:keydown.2)="number_clicked('2')"
+          >
+            2
+          </button>
+          <button
+            class="digit-button"
+            (click)="number_clicked('3')"
+            (window:keydown.3)="number_clicked('3')"
+          >
+            3
+          </button>
+          <button
+            class="operation-button"
+            (click)="binary_clicked('+')"
+            (window:keydown.+)="binary_clicked('+')"
+          >
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <button class="digit-button" (click)="unary_clicked('negate(')">
+            ±
+          </button>
+          <button
+            class="digit-button"
+            (click)="number_clicked('0')"
+            (window:keydown.0)="number_clicked('0')"
+          >
+            0
+          </button>
+          <button
+            class="digit-button"
+            (click)="number_clicked('.')"
+            (window:keydown.dot)="number_clicked('.')"
+          >
+            .
+          </button>
+          <button
+            class="operation-button"
+            style="background-color: #ff3077; font-weight: bold"
+            (click)="equla_clicked()"
+            (window:keydown.enter)="equla_clicked()"
+          >
+            <i class="fa-solid fa-equals"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

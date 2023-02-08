@@ -1,0 +1,92 @@
+/* start global  rules  */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+
+
+}
+
+/* end global rules  */
+
+/* start styling  */
+
+.calculator-body {
+  width: 437px;
+  border-radius: 5px;
+  background: rgba(128, 128, 128, 0.1);
+  margin: auto;
+  border: 7px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  background-color: #091921;
+}
+
+.calculator-screen {
+  height: 150px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+
+  border-bottom: 7px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.operation-txt {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  padding-bottom: 50px;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+.result-txt {
+  font-size: 40px;
+  text-align: right;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  gap: 5px 5px;
+  padding: 3px;
+
+}
+
+button {
+  width: 100px;
+  height: 70px;
+  border-radius: 5px;
+  border: none;
+}
+
+.operation-button {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: wheat;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.digit-button {
+  background-color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  transition: 0.25s ease-in-out;
+}
+
+.digit-button:hover {
+  background-color: rgba(235, 237, 236,0.7);
+}
+
+.operation-button:hover {
+  background-color: black;
+}
+
+/* end styling  */
